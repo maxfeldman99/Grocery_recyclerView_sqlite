@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maxfeldman.grocery_recyclerview_sqlite.MainActivity"
+    android:padding="16dp">
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_name"
+        android:id="@+id/tv_amount"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:layout_margin="8dp"
+        android:textSize="50sp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/btn_decrease"
+        android:layout_alignBottom="@id/tv_amount"
+        android:layout_alignTop="@id/tv_amount"
+        android:layout_toStartOf="@id/tv_amount"
+
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/btn_increase"
+        android:layout_alignBottom="@id/tv_amount"
+        android:layout_alignTop="@id/tv_amount"
+        android:layout_toEndOf="@id/tv_amount"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add"
+        android:id="@+id/btn_add"
+        android:layout_alignTop="@id/btn_increase"
+        android:layout_alignBottom="@id/btn_increase"
+        android:layout_toEndOf="@id/btn_increase"
+        android:layout_marginStart="8dp" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"
+        android:layout_below="@id/tv_amount"
+
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
