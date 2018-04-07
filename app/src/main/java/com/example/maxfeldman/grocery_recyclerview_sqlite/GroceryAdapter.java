@@ -57,9 +57,11 @@ public class GroceryAdapter extends RecyclerView.Adapter<GroceryAdapter.GroceryV
         }
         String name = myCursor.getString(myCursor.getColumnIndex(GroceryContract.GroceryEntry.COLUMN_NAME));
         int amount = myCursor.getInt(myCursor.getColumnIndex(GroceryContract.GroceryEntry.COLUMN_AMOUNT)); // to read from data base
+        long id = myCursor.getLong(myCursor.getColumnIndex(GroceryContract.GroceryEntry._ID)); // for deleting
 
         holder.nameText.setText(name);
         holder.countText.setText(String.valueOf(amount));
+        holder.itemView.setTag(id); //we take our item and set a tag for it to identify it
     }
 
     @Override
